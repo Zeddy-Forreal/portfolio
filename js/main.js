@@ -12,7 +12,7 @@ let light_mode = true;
 troll_elems = ['<i class="fa-solid fa-face-sleeping"></i>','<i class="fa-solid fa-laptop-code"></i>','<i class="fa-solid fa-mug-hot"></i>', '<i class="fa-solid fa-star"></i>','<i class="fa-solid fa-headphones"></i>' ]
 window.onload = ()=>{
     page_buttons[0].click()
-    // add_projects()
+    add_projects()
 }
 nav_buttons.forEach((elem)=>{
     elem.onmouseenter = ()=>{
@@ -131,55 +131,55 @@ contacts_inputs.forEach((inp)=>{
     }
 })
 
-// function add_projects() {
-//     fetch("https://api.github.com/users/Zeddy-Forreal/repos")
-//         .then(res => res.json())
-//         .then(repos => {
-//             for (const repo of repos) {
-//                 if (repo.name != "Zeddy-Forreal") {
+function add_projects() {
+    fetch("https://api.github.com/users/Zeddy-Forreal/repos")
+        .then(res => res.json())
+        .then(repos => {
+            for (const repo of repos) {
+                if (repo.name != "Zeddy-Forreal") {
                     
-//                     fetch(`https://api.github.com/repos/Zeddy-Forreal/${repo.name}/languages`)
-//                         .then(res => res.json())
-//                         .then(langs => {
+                    fetch(`https://api.github.com/repos/Zeddy-Forreal/${repo.name}/languages`)
+                        .then(res => res.json())
+                        .then(langs => {
                             
-//                             let language_names = Object.keys(langs).sort(); 
+                            let language_names = Object.keys(langs).sort(); 
 
-//                             let extra_techs = [];
-//                             switch(repo.name){
-//                                 case "tic-tac-toe":
-//                                     extra_techs.push("Tailwind");
-//                                     break
-//                                 case "prayer-times-app":
-//                                     extra_techs.push("API")
-//                                     break;
-//                                 default:
-//                                     extra_techs = []
-//                             }
+                            let extra_techs = [];
+                            switch(repo.name){
+                                case "tic-tac-toe":
+                                    extra_techs.push("Tailwind");
+                                    break
+                                case "prayer-times-app":
+                                    extra_techs.push("API")
+                                    break;
+                                default:
+                                    extra_techs = []
+                            }
                                                         
                             
-//                             let techs = [...language_names, ...extra_techs].map(lan => `<small class="${lan.toLowerCase()}">${lan}</small>`);
-//                             let html_text = `
-//                                 <div class="project">
-//                                     <header>
-//                                         <h2><i class="fa-light fa-folder"></i></h2>
-//                                         <div>
-//                                             <a target='_blank' href='${repo.html_url}'><h4><i class="fa-brands fa-github"></i></h4></a>
-//                                             <a target='_blank' href='https://zeddy-forreal.github.io/${repo.name}/'><h4><i class="fa-solid fa-arrow-up-right-from-square"></i></h4></a>
-//                                         </div>
-//                                     </header>
-//                                     <article>
-//                                         <h4>${repo.name.split("-").join(" ")}</h4>
-//                                         <h5>${repo.description || ""}</h5>
-//                                     </article>
-//                                     <footer>${techs.join(" ")}</footer>
-//                                 </div>`;
+                            let techs = [...language_names, ...extra_techs].map(lan => `<small class="${lan.toLowerCase()}">${lan}</small>`);
+                            let html_text = `
+                                <div class="project">
+                                    <header>
+                                        <h2><i class="fa-light fa-folder"></i></h2>
+                                        <div>
+                                            <a target='_blank' href='${repo.html_url}'><h4><i class="fa-brands fa-github"></i></h4></a>
+                                            <a target='_blank' href='https://zeddy-forreal.github.io/${repo.name}/'><h4><i class="fa-solid fa-arrow-up-right-from-square"></i></h4></a>
+                                        </div>
+                                    </header>
+                                    <article>
+                                        <h4>${repo.name.split("-").join(" ")}</h4>
+                                        <h5>${repo.description || ""}</h5>
+                                    </article>
+                                    <footer>${techs.join(" ")}</footer>
+                                </div>`;
                             
-//                             document.querySelector(".projects_container").innerHTML += html_text;
-//                         });
-//                 }
-//             }
-//         });
-// }
+                            document.querySelector(".projects_container").innerHTML += html_text;
+                        });
+                }
+            }
+        });
+}
 
 form.addEventListener("submit", async (a)=>{
     a.preventDefault()
@@ -191,4 +191,5 @@ form.addEventListener("submit", async (a)=>{
     }
     form.reset()
 })
+
 
