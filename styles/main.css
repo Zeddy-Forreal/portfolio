@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "font";
-    src: url(Font.ttf);
-    padding: 0;
-}
 
 *{
     box-sizing: border-box;
@@ -353,3 +348,4 @@ h5 span, h4 span, small span{
     }
 
 }
+
