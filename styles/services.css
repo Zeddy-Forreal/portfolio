@@ -1,0 +1,75 @@
+#services .service{
+    height: 420px;
+    position: relative;
+    width: 350px;
+    min-width: 30%;
+    background-color: var(--color3);
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1.8rem;
+    padding: 5rem 2rem 2rem 2rem;
+    text-align: justify;
+    box-shadow: var(--sh);
+    
+}
+#services .service:hover{
+    transform: scale(1.02);
+}
+#services .service header{
+    position: absolute;
+    top: -3.5rem;
+    width: 7rem;
+    aspect-ratio: 1;
+    background-color: var(--color3);
+    border: 10px solid var(--body);
+    border-radius: 50%;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--main_color);
+    text-shadow: var(--tsh);
+
+}
+#services .service h3{
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    color: var(--main_color);
+    letter-spacing: 0.1rem;
+    padding-left: 0.1rem;
+    font-weight: 800;
+}
+#services .service h5{
+    color: var(--light_text);
+    text-align-last: center;
+    font-size: larger;
+}
+
+#services #page_content{
+    display: flex
+;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: start;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+
+}
+@media (max-width:865px){
+    #services .service{
+        width: 90%;
+        min-height: unset;
+        height: fit-content;
+        padding-bottom: 4rem;
+    }
+}
+@media (max-width:480px){
+    #services .service{
+        width: 100%;
+    }
+}

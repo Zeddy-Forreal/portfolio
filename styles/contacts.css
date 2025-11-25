@@ -1,0 +1,157 @@
+#contacts #page_content{
+        display: flex
+;
+    gap: 1rem;
+}
+
+#contacts #page_content > *{
+    height: 100%;
+}
+#contacts .words{
+    background-color: var(--color3);
+    color: var(--light_text);
+    padding: 2rem;
+    text-align: justify;
+    display: flex
+;
+    flex-direction: column;
+    line-height: 1.6rem;
+    box-shadow: var(--sh);
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+#contacts form{
+    width: 50%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+#contacts .words h2{
+    text-wrap: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 900;
+}
+#contacts .words span{
+    color: var(--main_color);
+    text-shadow: var(--tsh2);
+    font-weight: inherit;
+    letter-spacing: inherit;
+}
+
+
+#contacts form .fancy_button{
+    cursor: pointer;
+    font-weight: 900;
+    padding: 0.9rem 4.5rem;
+}
+#contacts input{
+    width: 100%;
+    padding: 0.4rem 0rem;
+    position: relative;
+        color: var(--dark_text);
+
+}
+#contacts form > div{
+     width: 100%;
+    display: flex
+;
+position: relative;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+#contacts form textarea{
+    height: 4rem;
+    max-height: 7rem;
+    resize: none;
+    color: var(--dark_text);
+    position: relative;
+}
+#contacts form > div:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1.3px;
+    background-color: var(--dark_text);
+    z-index: 1;
+    transition: 0.4s;
+}
+#contacts label{
+    color: var(--dark_text);
+    font-weight: 900;
+
+}
+#contacts form > div:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1.3px;
+    background-color: var(--color2);
+}
+#contacts form > .active:before{
+    width: 100%;
+}
+
+#contacts hr{
+        height: 1px;
+    width: 100%;
+    background-color: var(--light_text);
+}
+#contacts .social{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+#contacts .social a{
+    background-color: var(--light_text);
+    width: 30px;
+    aspect-ratio: 1;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: var(--color3);
+    box-shadow: var(--sh);
+}
+::placeholder{
+    color: var(--dark_text);
+    opacity: 0.45;
+}
+#contacts .social a:hover{
+    transform: scale(1.1);
+}
+@media (max-width:840px) {
+    #contacts #page_content{
+        flex-direction: column;
+    }
+    #contacts form{
+        width: 100%;
+        padding: 2rem 0;
+        height: auto !important;
+        gap: 2rem;
+    }
+    #contacts .social{
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width:480px) {
+
+    #contacts form .fancy_button{
+        font-size: 0.8rem;
+        padding: 0.7rem 3.5rem;
+    }
+}
+@media (max-width:395px) {
+#contacts h2{
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+}
+}
