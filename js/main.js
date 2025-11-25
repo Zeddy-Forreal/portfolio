@@ -136,7 +136,7 @@ function add_projects() {
         .then(res => res.json())
         .then(repos => {
             for (const repo of repos) {
-                if (repo.name != "Zeddy-Forreal") {
+                if (repo.name != "Zeddy-Forreal" && repo.name != "portfolio") {
                     
                     fetch(`https://api.github.com/repos/Zeddy-Forreal/${repo.name}/languages`)
                         .then(res => res.json())
@@ -191,5 +191,6 @@ form.addEventListener("submit", async (a)=>{
     }
     form.reset()
 })
+
 
 
