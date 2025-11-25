@@ -78,7 +78,7 @@ body{
     height: 100dvh;
 }
 #side_bar{
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 50px;
     display: flex
@@ -351,4 +351,5 @@ h5 span, h4 span, small span{
     #container > section{
         padding: 2rem 1rem;
     }
+
 }
