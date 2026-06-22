@@ -77,43 +77,54 @@ const heroSection = document.querySelector('.hero');
 if (heroSection) heroObserver.observe(heroSection);
 
 
-// ===== Contact form =====
+const form = document.querySelector('form');
 const submitBtn = document.getElementById('submitBtn');
 const formSuccess = document.getElementById('formSuccess');
 
-if (submitBtn) {
-  submitBtn.addEventListener('click', () => {
-    const name = document.getElementById('fname').value.trim();
-    const email = document.getElementById('femail').value.trim();
-    const message = document.getElementById('fmessage').value.trim();
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-    if (!name || !email || !message) {
-      [fname, femail, fmessage].forEach(id => {
-        const el = document.getElementById(id.id || id);
-        if (el && !el.value.trim()) {
-          el.style.borderColor = '#ff6b35';
-          el.style.animation = 'shake 0.3s ease';
-          setTimeout(() => {
-            el.style.borderColor = '';
-            el.style.animation = '';
-          }, 600);
-        }
-      });
-      return;
+  const name = document.getElementById('fname').value.trim();
+  const email = document.getElementById('femail').value.trim();
+  const message = document.getElementById('fmessage').value.trim();
+
+  if (!name || !email || !message) {
+    [fname, femail, fmessage].forEach(id => {
+      const el = document.getElementById(id.id || id);
+      if (el && !el.value.trim()) {
+        el.style.borderColor = '#ff6b35';
+        el.style.animation = 'shake 0.3s ease';
+
+        setTimeout(() => {
+          el.style.borderColor = '';
+          el.style.animation = '';
+        }, 600);
+      }
+    });
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.querySelector('.btn-text').textContent = 'Sending...';
+
+  const response = await fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: {
+      Accept: 'application/json'
     }
-
-    submitBtn.disabled = true;
-    submitBtn.querySelector('.btn-text').textContent = 'Sending...';
-
-    setTimeout(() => {
-      submitBtn.style.display = 'none';
-      formSuccess.classList.add('show');
-      ['fname','femail','fsubject','fmessage'].forEach(id => {
-        document.getElementById(id).value = '';
-      });
-    }, 1200);
   });
-}
+
+  if (response.ok) {
+    submitBtn.style.display = 'none';
+    formSuccess.classList.add('show');
+    form.reset();
+  } else {
+    alert('Something went wrong. Try again.');
+    submitBtn.disabled = false;
+    submitBtn.querySelector('.btn-text').textContent = 'Send Message';
+  }
+});
 
 
 window.addEventListener('mousemove', (e) => {
