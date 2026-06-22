@@ -1,194 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <title>ZEDDY</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Zeddy</title>
-
-<link rel="stylesheet" href="styles/webfonts/all.css">
-<link rel="stylesheet" href="styles/webfonts/all.min.css">
-<link rel="stylesheet" href="styles/webfonts/fontawesome.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/about.css">
-    <link rel="stylesheet" href="styles/services.css">
-    <link rel="stylesheet" href="styles/projects.css">
-    <link rel="stylesheet" href="styles/contacts.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" href="static/icon.png">
 </head>
 <body>
-    <nav id="side_bar" >
-                        <button id="close"><i class="fa-thin fa-xmark"></i></button>
-        <div>
-            <header>
-                <div class="logo"></div>
 
-            </header>
+
+
+  <!-- Noise Overlay -->
+  <div class="noise"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">ZD.</div>
+    <ul class="nav-links">
+      
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#work" class="nav-link">Work</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span>Available for work</span>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">ZEDDY</div>
+
+    <div class="hero-content">
+      <div class="hero-tag reveal">
+        <span class="tag-line"></span>
+        Frontend Developer | Electrical Engineering Student
+      </div>
+      <h1 class="hero-title">
+        <span class="line reveal" data-delay="0">Hi, my</span>
+        <span class="line reveal" data-delay="100">name is </span>
+        <span class="line accent reveal" data-delay="200">ZEDDY.</span>
+      </h1>
+      <p class="hero-sub reveal" data-delay="350">
+        I build things for the web — clean layouts,<br>
+        precise interactions, and interfaces that <strong>feel good</strong>.
+      </p>
+      <div class="hero-cta reveal" data-delay="500">
+        <a href="#work" class="btn-primary">See My Work</a>
+        <a href="#contact" class="btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <div class="hero-counter">
+      <div class="counter-item">
+        <span class="count" data-target="10">0</span>+
+        <small>Projects</small>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-item">
+        <span class="count" data-target="3">0</span>+
+        <small>Years</small>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-item">
+        <span class="count" data-target="100">0</span>%
+        <small>Responsive</small>
+      </div>
+            <div class="counter-divider"></div>
+      <div class="counter-item">
+        <span class="coffee">&infin;</span>
+        <small>Coffee</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span>FRONTEND DEVELOPMENT</span>
+      <span>UI / UX DESIGN</span>
+      <span>RESPONSIVE LAYOUTS</span>
+      <span>PORTFOLIO BUILDS</span>
+      <span>PERFORMANCE</span>
+      <span>FRONTEND DEVELOPMENT</span>
+      <span>UI / UX DESIGN</span>
+      <span>RESPONSIVE LAYOUTS</span>
+      <span>PORTFOLIO BUILDS</span>
+      <span>PERFORMANCE</span>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <span class="section-label">› What I do</span>
+      <h2 class="section-title">Services</h2>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card" data-index="01">
+        <div class="card-number">01</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="32" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M14 17L9 20L14 23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M26 17L31 20L26 23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M22 14L18 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
-        <div class="nav">
-            <hr>
-            <button class="page_button nav_button"><i class="fa-light fa-house"></i><p>Home</p></button>
-            <hr>
-            <button class="page_button nav_button"><i class="fa-light fa-hand-holding-dollar"></i><p>Services</p></button>
-            <hr>
-            <button class="page_button nav_button"><i class="fa-light fa-diagram-project"></i><p>Projects</p></button>
-            <hr>
-            <button class="page_button nav_button"><i class="fa-light fa-comment-dots"></i><p>Contacts</p></button>
-            <hr>
+        <h3>Portfolio Design</h3>
+        <p>Portfolios that don't just display work — they tell a story. Strong visuals and clear navigation that leaves an impression.</p>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card" data-index="02">
+        <div class="card-number">02</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="6" width="24" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="12" y="6" width="24" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M18 15H28M18 20H28M18 25H24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
-        <div>
-            <hr>
-            <button class="nav_button theme_mode"><i class="fa-light fa-moon"></i></button>
-            <hr>
+        <h3>Website Builds</h3>
+        <p>Landing pages, business sites, personal projects — fast, responsive, and visually sharp across every device and platform.</p>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card" data-index="03">
+        <div class="card-number">03</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="8" width="28" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="12" y="30" width="16" height="3" rx="1" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M16 33V36M24 33V36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M14 17L18 13L22 17L26 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-    </nav>
-    <button id="side_bar_button"><i class="fa-light fa-bars"></i></button>
-    <main id="container">
-        <section id="home">
-            <h1 class="troll"></h1>
-            <h1 class="troll"></h1>
-            <h1 class="troll"></h1>
-            <h1 class="troll"></h1>
-            <h1 class="troll"></h1>
-            <footer>
-                <small>Designer & Built by <a href="#"><span>Zeddy</span></a></small>
-            </footer>
-            <section class="page_content">
-                <div class="words">
-                        <h5>hi, my name is</h5>
-                        <div class="large_fonts">
-                            <h1 class="zeddy" id="page_title">
-                            <span class="spec">Z</span>
-                            <span>E</span>
-                            <span>D</span>
-                            <span>D</span>
-                            <span>Y</span>
-                            <span>.</span>
-                            </h1>
-                            <h1>I build things for web.</h1>
-                        </div>
-                    <h5>I’m a <span>front-end developer</span> who enjoys building websites and experimenting with design. I like creating <span>clean</span> layouts and <span>small details</span> that make a site feel good to use.</h5>
-                    <button class="fancy_button">
-                        <p>Resume</p>
-                        
-                    </button>
-                    
-                </div>
-                
-            </section>
-            <aside >
-                <a href="https://www.instagram.com/zeddy.forreal?igsh=MXF0ZzJramU2bnVzdA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/zeddy-foreal" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://wa.me/201559615133" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <hr class="hor">
-            </aside>
-        </section>
-        <section id="services">
-            <header id="page_title">
-                <span>S</span>
-                <span>E</span>
-                <span>R</span>
-                <span>V</span>
-                <span>I</span>
-                <span>C</span>
-                <span>E</span>
-                <span>S</span>
-            </header>
-            <section id="page_content">
-                <div class="service">
-                    <header><i class="fa-light fa-address-book"></i></header>
-                    <h3>PORTFOLIOS</h3>
-                    <h5>I design <span>professional</span> and <span>personal</span> portfolios that don’t just display work but tell a story. <span>Clean structures</span>, <span>strong visuals</span>, and clear navigation make sure your identity, skills, and achievements <span>stand out</span> and leave an impression on every visitor.</h5>
-                </div>
-                <div class="service">
-                    <header><i class="fa-light fa-globe"></i></header>
-                    <h3>Website Builds</h3>
-                    <h5>Whether it’s a landing page, business site, or a personal project, I build websites that are <span>fast</span>, <span>responsive</span>, and <span>visually appealing</span>. Each project is developed with a <span>focus</span> on <span>modern design</span> practices, usability, and <span>performance</span> so your site feels smooth and reliable across <span>all</span> platforms.</h5>
-                </div>
-                <div class="service">
-                    <header><i class="fa-light fa-object-group"></i></header>
-                    <h3>Responsive - UiUx</h3>
-                    <h5>I <span>create</span> interfaces that feel natural to use, with layouts that adjust beautifully to <span>any screen size</span>. My approach blends <span>visual design </span> with user psychology, making sure every click, scroll, and interaction feels <span>intuitive</span>. The result is a seamless user journey that keeps people engaged.</h5>
-                </div>
+        <h3>Responsive UI/UX</h3>
+        <p>Interfaces that feel natural. Layouts that adapt beautifully. Every scroll, click, and interaction crafted with intention.</p>
+        <div class="card-arrow">→</div>
+      </div>
 
-            </section>
-            
-        </section>
-        <section id="projects">
-            <header id="page_title">
-                <span>P</span>
-                <span>R</span>
-                <span>O</span>
-                <span>J</span>
-                <span>E</span>
-                <span>C</span>
-                <span>T</span>
-                <span>S</span>
-            </header>
-            <section id="page_content" class="projects_container">
-                
-            </section>
-        </section>
-        <section id="contacts">
-            <header id="page_title">
-                <span>C</span>
-                <span>O</span>
-                <span>N</span>
-                <span>T</span>
-                <span>A</span>
-                <span>C</span>
-                <span>T</span>
-                <span>S</span>
-            </header>
-            <section id="page_content">
-                <section class="words">
-                     <h2>Let's <span>Connect</span>.</h2>
-                    <h4>If you’d like to reach out, <span>feel free to send me a message</span>. Whether it’s a small question, an <span>idea</span> you’re working on, or something you want to build, I’m open to hearing it. I try to reply <span>as soon as I can</span>.</h4>
+    </div>
+  </section>
 
-                <hr class="hor">
-                    <div class="social">
-                <a href="https://www.instagram.com/zeddy.forreal/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/zeddy-foreal"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.facebook.com/x.MeowZed"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://wa.me/201559615133"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
-                </section>
-                        <form action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="7c1b13a8-3950-4e3e-999f-bf78890c354e">
-                        
+  <!-- ===== WORK / PORTFOLIO ===== -->
+  <section class="work" id="work">
+    <div class="section-header">
+      <span class="section-label">› Selected work</span>
+      <h2 class="section-title">Portfolio</h2>
+    </div>
 
-                        <div>
-                            <label>Name</label>
-                            <input class="inp" type="text" placeholder="Name" name="name" required>
-                        </div>
+    <div class="work-grid" id="work-grid">
 
-                        <div>
-                            <label>Email</label>
-                            <input class="inp" type="email" placeholder="Email" name="email" required>
-                        </div>
+    </div>
+  </section>
 
-                        <div>
-                            <label>Subject</label>
-                            <input class="inp" type="text" placeholder="Subject" name="subject" required>
-                        </div>
+  <!-- ===== ABOUT STRIP ===== -->
+  <section class="about">
+    <div class="about-inner">
+      <div class="about-left">
+        <span class="section-label">› Who I am</span>
+        <h2>Zeddy builds the web<br><em>one pixel at a time.</em></h2>
+        <p>I'm a front-end developer who loves the craft of clean code and intentional design. I focus on the small details — the ones most people don't notice, but everyone feels.</p>
+        <div class="about-tags">
+          <span>HTML</span>
+          <span>JavaScript</span>
+          <span>CSS</span>
+          <span>Responsive</span>
+          <span>Animations</span>
+          <span>React</span>
+          <span>Tailwind</span>
+          <span>UI</span>
+          <span>UX</span>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="about-card">
+          <div class="ac-quote">"</div>
+          <p>Perfectionism isn’t my weakness—it’s my standard. I don’t stop when it’s good; I stop when it can’t be improved anymore.</p>
+          <div class="ac-name">— Zeddy</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                        <div class="ta">
-                            <label>Message</label>
-                            <textarea class="inp" placeholder="Message.." name="message" required></textarea>
-                        </div>
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <span class="section-label">› Get in touch</span>
+        <h2>Let's <strong class="accent">Connect.</strong></h2>
+        <p>Whether you want to know more about me, or it's a question, an idea, or something you want to build — I'm open to hearing it. I reply as fast as I can.</p>
+        <div class="contact-socials">
+              <a href="https://www.instagram.com/zeddy.forreal/" target="_blank" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8" />
+      <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+      <path d="M16.5 7.5v.01" />
+    </svg>Instagram ↗</a>
+          <a href="https://www.linkedin.com/in/zeddy-forreal/" target="_blank" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg>LinkedIn ↗</a>
+          <a href="https://github.com/Zeddy-Forreal" target="_blank" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>GitHub ↗</a>
+          <a href="https://www.facebook.com/zeddy.forreal/" target="_blank" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+</svg>Facebook ↗</a>
+        </div>
+      </div>
 
-                        <button type="submit" class="fancy_button">
-                            <p>SUBMIT</p>
-                        </button>
-                        </form>
+      <form class="contact-right" action="https://formspree.io/f/xwvdkagp" method="POST">
+        <div class="form-group">
+          <input type="text" id="fname" placeholder=" " autocomplete="off" name="name"/>
+          <label for="fname">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="femail" placeholder=" " autocomplete="off" name="email"/>
+          <label for="femail">Email Address</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="fsubject" placeholder=" " autocomplete="off" name="subject"/>
+          <label for="fsubject">Subject</label>
+        </div>
+        <div class="form-group">
+          <textarea id="fmessage" rows="4" placeholder=" " name="message"></textarea>
+          <label for="fmessage">Your Message</label>
+        </div>
+        <button class="submit-btn" id="submitBtn" type="submit">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-icon">→</span>
+        </button>
+        <div class="form-success" id="formSuccess">
+          ✓ Message sent! I'll get back to you soon.
+        </div>
+      </form>
+    </div>
+  </section>
 
-            </section>
-        </section>
-    </main>
-    <script src="js/main.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2025 Built with love by <strong>Zeddy</strong></p>
+    </div>
+  </footer>
+
+  <script src="script/main.js"></script>
 </body>
-
 </html>
-
-
