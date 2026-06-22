@@ -1,25 +1,9 @@
-/* ===========================
-   ZEDDY PORTFOLIO — script.js
-   =========================== */
-
-// ===== Custom Cursor =====
-
-
-
-
-
-
-
-
-
-// ===== Nav scroll effect =====
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 });
 let featured = ["prayer-times-app", "Zawn-Academy-Portal", "wave-tech-ecommerce", "Kurogane-Protocol", "zanark-portfolio-website", "kairo-portfolio"]
 
-// ===== Reveal on scroll =====
 const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -36,7 +20,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealEls.forEach(el => revealObserver.observe(el));
 
 
-// ===== Section-level reveal for non-marked elements =====
 const sections = document.querySelectorAll('.service-card, .work-card, .about-inner, .contact-inner');
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
@@ -59,7 +42,6 @@ sections.forEach(el => {
 });
 
 
-// ===== Counter animation =====
 const counts = document.querySelectorAll('.count');
 let countersStarted = false;
 
@@ -106,7 +88,6 @@ if (submitBtn) {
     const message = document.getElementById('fmessage').value.trim();
 
     if (!name || !email || !message) {
-      // Shake animation on empty fields
       [fname, femail, fmessage].forEach(id => {
         const el = document.getElementById(id.id || id);
         if (el && !el.value.trim()) {
@@ -127,7 +108,6 @@ if (submitBtn) {
     setTimeout(() => {
       submitBtn.style.display = 'none';
       formSuccess.classList.add('show');
-      // Clear fields
       ['fname','femail','fsubject','fmessage'].forEach(id => {
         document.getElementById(id).value = '';
       });
@@ -136,7 +116,6 @@ if (submitBtn) {
 }
 
 
-// ===== Parallax on hero bg text =====
 window.addEventListener('mousemove', (e) => {
   const bgText = document.querySelector('.hero-bg-text');
   if (!bgText) return;
@@ -146,9 +125,6 @@ window.addEventListener('mousemove', (e) => {
 
 
 
-
-
-// ===== Add shake keyframe via JS =====
 const style = document.createElement('style');
 style.textContent = `
   @keyframes shake {
@@ -160,38 +136,38 @@ style.textContent = `
 document.head.appendChild(style);
 
 
-// let workGrid = document.getElementById("work-grid")
-// function add_projects() {
-//     workGrid.innerHTML = ""
-//     fetch("https://api.github.com/users/Zeddy-Forreal/repos")
-//         .then(res => res.json())
-//         .then(repos => {
-//             for (const repo of repos) {
-//                 if (repo.name != "Zeddy-Forreal" && repo.name != "portfolio") {
-//                   workGrid.innerHTML+=`
-//                   <div class="work-card ${featured.includes(repo.name)? 'fav':''}">
-//                     <div class="work-img" style="background-image: URL(https://raw.githubusercontent.com/Zeddy-Forreal/${repo.name}/refs/heads/main/preview.png)">
+let workGrid = document.getElementById("work-grid")
+function add_projects() {
+    workGrid.innerHTML = ""
+    fetch("https://api.github.com/users/Zeddy-Forreal/repos")
+        .then(res => res.json())
+        .then(repos => {
+            for (const repo of repos) {
+                if (repo.name != "Zeddy-Forreal" && repo.name != "portfolio") {
+                  workGrid.innerHTML+=`
+                  <div class="work-card ${featured.includes(repo.name)? 'fav':''}">
+                    <div class="work-img" style="background-image: URL(https://raw.githubusercontent.com/Zeddy-Forreal/${repo.name}/refs/heads/main/preview.png)">
                      
                   
-//                     </div>
-//                     <div class="work-info">
-//                       <div class="con">
-//                       <span class="work-tag">${repo.topics.join(" · ")}</span>
-//                       <a href="${repo.homepage}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
-// 	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-// 	<path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-// 	<path d="M11 13l9 -9" />
-// 	<path d="M15 4h5v5" />
-// </svg></a>
-//                       </div>
-//                       <h3>${repo.name.split("-").join(" ")}</h3>
-//                       <p>${repo.description}</p>
-//                     </div>
-//                   </div>
-//                   `
-//                    console.log(repo)
-//                 }
-//             }
-//         });
-// }
-// add_projects()
+                    </div>
+                    <div class="work-info">
+                      <div class="con">
+                      <span class="work-tag">${repo.topics.join(" · ")}</span>
+                      <a href="${repo.homepage}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+	<path d="M11 13l9 -9" />
+	<path d="M15 4h5v5" />
+</svg></a>
+                      </div>
+                      <h3>${repo.name.split("-").join(" ")}</h3>
+                      <p>${repo.description}</p>
+                    </div>
+                  </div>
+                  `
+                   console.log(repo)
+                }
+            }
+        });
+}
+add_projects()
