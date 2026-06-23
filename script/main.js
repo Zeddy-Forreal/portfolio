@@ -149,7 +149,8 @@ document.head.appendChild(style);
 
 let workGrid = document.getElementById("work-grid")
 function add_projects() {
-    workGrid.innerHTML = ""
+    workGrid.innerHTML = "";
+    
     fetch("https://api.github.com/users/Zeddy-Forreal/repos")
         .then(res => res.json())
         .then(repos => {
@@ -171,7 +172,7 @@ function add_projects() {
 	<path d="M15 4h5v5" />
 </svg></a>
                       </div>
-                      <h3>${repo.name.split("-").join(" ")}</h3>
+                      <h3>${repo.name.split("-").join(" ")} ${featured.includes(repo.name)?` — <span>★</span>`:""}</h3>
                       <p>${repo.description}</p>
                     </div>
                   </div>
@@ -180,5 +181,6 @@ function add_projects() {
                 }
             }
         });
+        document.querySelector(".work-card.fav").classList.add("full")
 }
 add_projects()
