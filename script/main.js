@@ -2,7 +2,7 @@ const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 });
-let featured = ["prayer-times-app", "Zawn-Academy-Portal", "wave-tech-ecommerce", "Kurogane-Protocol", "zanark-portfolio-website", "kairo-portfolio"]
+let featured = ["prayer-times-app", "Zawn-Academy-Portal", "wave-tech-ecommerce", "Kurogane-Protocol", "zanark-portfolio-website", "kairo-portfolio", "Ten-Portfolio"]
 
 const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
@@ -172,7 +172,7 @@ function add_projects() {
 	<path d="M15 4h5v5" />
 </svg></a>
                       </div>
-                      <h3>${repo.name.split("-").join(" ")} ${featured.includes(repo.name)?` — <span>★</span>`:""}</h3>
+                      <h3>${repo.name.split("-").join(" ")} ${featured.includes(repo.name)?` - <span>★</span>`:""}</h3>
                       <p>${repo.description}</p>
                     </div>
                   </div>
