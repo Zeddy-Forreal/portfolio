@@ -561,6 +561,11 @@ strong { font-style: normal; color: var(--accent); }
 .about-tags {
   display: flex; flex-wrap: wrap; gap: 0.6rem;
 }
+.about-left p a{
+  text-decoration: underline;
+  color: var(--accent);
+  font-weight: 800;
+}
 .about-tags span {
   font-size: 0.75rem; letter-spacing: 0.1em;
   padding: 0.4rem 1rem;
