@@ -172,7 +172,7 @@ function add_projects() {
 	<path d="M15 4h5v5" />
 </svg></a>
                       </div>
-                      <h3>${repo.name.split("-").join(" ")} ${featured.includes(repo.name)?` - <span>★</span>`:featured.includes(repo.name)?` - <span>★★</span>`:""}</h3>
+                      <h3>${repo.name.split("-").join(" ")} ${featured.includes(repo.name)?` - <span>★</span>`:top_repos.includes(repo.name)?` - <span>★★</span>`:""}</h3>
                       <p>${repo.description}</p>
                     </div>
                   </div>
