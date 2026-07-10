@@ -392,6 +392,9 @@ strong { font-style: normal; color: var(--accent); }
   order: -1;
 
 }
+.work-card.top{
+  order:-2;
+}
 .work-card.full{
     grid-column: span 2;
 }
