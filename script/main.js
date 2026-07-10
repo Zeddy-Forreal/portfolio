@@ -2,8 +2,8 @@ const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 });
-let featured = ["prayer-times-app", "Zawn-Academy-Portal", "wave-tech-ecommerce", "Kurogane-Protocol", "zanark-portfolio-website", "kairo-portfolio", "Ten-Portfolio"]
-
+let featured = ["Zawn-Academy-Portal", "wave-tech-ecommerce", "Kurogane-Protocol", "zanark-portfolio-website"]
+let top_repos = ["weekly-goals-tracker", "prayer-times-app", "kairo-portfolio", "Ten-Portfolio"];
 const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -157,7 +157,7 @@ function add_projects() {
             for (const repo of repos) {
                 if (repo.name != "Zeddy-Forreal" && repo.name != "portfolio") {
                   workGrid.innerHTML+=`
-                  <div class="work-card ${featured.includes(repo.name)? 'fav':''}">
+                  <div class="work-card ${featured.includes(repo.name)? 'fav':top_repos.includes(repo.name)? 'top':''}">
                     <div class="work-img" style="background-image: URL(https://raw.githubusercontent.com/Zeddy-Forreal/${repo.name}/refs/heads/main/preview.png)">
                      
                   
