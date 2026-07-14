@@ -113,21 +113,6 @@ strong { font-style: normal; color: var(--accent); }
 .nav-link:hover { color: var(--text); }
 .nav-link:hover::after { transform: scaleX(1); transform-origin: left; }
 
-.nav-status {
-  display: flex; align-items: center; gap: 0.5rem;
-  font-size: 0.75rem; color: var(--muted);
-  font-family: var(--font-mono);
-}
-.status-dot {
-  width: 7px; height: 7px;
-  background: #4ade80; border-radius: 50%;
-  animation: pulse-dot 2s infinite;
-}
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.8); }
-}
-
 /* ===== HERO ===== */
 .hero {
   min-height: 100vh;
@@ -793,7 +778,6 @@ strong { font-style: normal; color: var(--accent); }
   .contact { padding: 5rem 1.5rem; }
   .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
   .footer { padding: 2rem 1.5rem; }
-  .nav-status { display: none; }
   :root{
     --mer-gap:8rem;
   }
